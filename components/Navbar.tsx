@@ -6,10 +6,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import styles from "../styles/Navbar.module.css";
 
-const Navbar = ({ sidebarOpen, openSidebar }: any) => {
+const Navbar = ({ sidebarOpen, openSidebar, showSidebar }: any) => {
   return (
     <nav className={styles.navbar}>
-      <div className={styles.nav_icon} onClick={openSidebar} >
+      <div className={styles.nav_icon} onClick={() => showSidebar(true)}>
         <i>
           <FontAwesomeIcon icon={faBars} aria-hidden={true} />
         </i>
@@ -41,7 +41,6 @@ const Navbar = ({ sidebarOpen, openSidebar }: any) => {
             <FontAwesomeIcon icon={faClock} />
           </i>
         </a>
-     
       </div>
     </nav>
   );

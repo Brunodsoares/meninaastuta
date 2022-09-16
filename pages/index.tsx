@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import type { NextPage } from 'next'
 
-import Sidebar from '../components/Sidebar'
+import Sidebar from './Sidebar'
 import Navbar from '../components/Navbar'
+import LandingPage from '../components/LandingPage'
+
 
 import styles from '../styles/Home.module.css'
 
@@ -16,10 +18,12 @@ const Home: NextPage = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
-      <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} />    
-    </div>
+    < LandingPage />
+    // <div className={styles.container}>
+    //   {sidebarOpen == true ? }
+    //   <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
+    //   <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} />    
+    // </div>
   );
 }
 
